@@ -1,13 +1,18 @@
+<script context="module">
+  // returns the query param string value to be used as a prop
+  export async function preload(page) {
+    return { state: page.params['state'] }
+  }
+</script>
+
 <script>
   import CovidStat from '../components/CovidStat.svelte'
   import CovidChart from '../components/CovidChart.svelte'
   import TableContainer from '../components/TableContainer.svelte'
+  export let state
 </script>
 
-<svelte:head>
-  <title>Covid-19 Tracker</title>
-</svelte:head>
+<h1>{state}</h1>
 
 <CovidStat />
 <CovidChart />
-<TableContainer />

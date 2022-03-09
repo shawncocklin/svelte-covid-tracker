@@ -6,4 +6,4 @@
 <h1>Table Container</h1>
 
 <TableFilter />
-<TableFilter />
+<Table />
